@@ -1,0 +1,12 @@
+1)
+	curl 'http://www.ensembl.org/Mus_musculus/Variation/Summary?v=rs4224828' 'Content-type=text/x-fasta'
+	Het id wordt bekomen ENSMUSG00000017167
+	curl' http://rest.ensembl.org/lookup/id/ENSMUSG00000017167' 'Content-type=text/x-fasta'
+	Via NCBI kan dan de variant gevonen worden en de locatie word verkregen. Dit wordt dan in de url gestoken. 
+	curl' http://www.ensembl.org/10090/Variation/Explore?r=4:136443449-136444449;v=rs4224828 'Content-type=text/x-fasta'
+
+2)
+Ga naar HUGO gene names NOTCH1 is the correct naam gelegen op chromossom 2
+Chr2:26457903-26516663
+curl 'http://rest.ensembl.org/sequence/region/symbol/mus_musculus/2:26457903..26458003;NOTCH1?' -H 'Content-type=text/x-fasta'
+
