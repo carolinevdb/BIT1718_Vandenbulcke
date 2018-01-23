@@ -1,0 +1,9 @@
+ mongoimport --db bioinf_ex --collection new --drop --file bioinf_mongo_examen.json
+ 
+ 1)	> db.new.find( { "method_of_admission" :["TABLET, BUCCAL, SUBLINGUAL"]} ).count()
+
+2)	db.new.find({"percentage_of_side_effects":{$gt:12}}).count()
+
+3)	    > db.new.find({"percentage_of_side_effects":{$gt:10}},{"_id":1, "company":1}).sort({"percentage_of_side_effects":-1})
+
+
