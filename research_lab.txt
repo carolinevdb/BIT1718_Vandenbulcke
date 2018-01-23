@@ -1,0 +1,14 @@
+UNF 	research(pers_nr, member_name, pers_Date_of_birth, lab_code, lab_name, (res_code, res_desc, res_super))
+
+1 NF	personnel(pers_nr, member_name, pers_date_of_birth, lab_code, lab_name)
+	research(pers_nr, res_code, res_desc, res_super)
+
+2NF	research(pers_nr, res_code, res_desc, res_super)
+	lab(lab_code, lab_name, pers_nr)
+	persnal(pers_nr, pers_date_of_birth, members_name)	
+
+3NF	personnel(pers_nr, pers_id)
+	member(pers_nr, member_name, pers_date_of_birth)
+	lab(lab_code, lab_name)
+	research(research_code, reasearch_supervisor, research_desc)
+	
